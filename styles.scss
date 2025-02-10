@@ -1,0 +1,100 @@
+:root {
+  @font-face {
+    font-family:'Inter';
+    src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: 400 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family:'Inter';
+    src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@mixin text-preset-1 {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2 {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2-bold {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+$phone-width: 600px;
+
+@mixin phone {
+  @media (max-width: $phone-width) {
+    @content
+  }
+}
+
+$color-grey-900: #141414;
+$color-grey-800: #1F1F1F;
+$color-grey-700: #333333;
+$color-green: #C4F82A;
+$color-white: #FFFFFF;
+
+$space-40px: 2.5rem;
+$space-24px: 1.5rem;
+$space-16px: 1rem;
+$space-12px: 0.75rem;
+$space-8px: 0.5rem;
+$space-4px: 0.25rem;
+
+$radius-12px: 0.75rem;
+
+$max-card-width: 384px;
+
+* {
+  box-sizing: border-box;
+}
+
+h1, p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: $space-24px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
