@@ -59,6 +59,7 @@ $space-12px: 0.75rem;
 $space-8px: 0.5rem;
 $space-4px: 0.25rem;
 
+$radius-8px: 0.5rem;
 $radius-12px: 0.75rem;
 
 $max-card-width: 384px;
@@ -73,6 +74,7 @@ h1, p {
 
 body {
   margin: 0;
+  background-color: $color-grey-900;
   padding: $space-24px;
   height: 100vh;
   display: flex;
@@ -97,4 +99,71 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.button {
+  border-radius: $radius-8px;
+  color: $color-white;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  @include text-preset-2-bold;
+}
+.button:hover {
+  color: $color-green;
+}
+
+.card {
+  border-radius: $radius-12px;
+  background-color: $color-grey-800;
+  padding: $space-40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: $space-24px;
+
+  @include phone {
+    padding: $space-24px;
+  }
+}
+
+.cardButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: $space-16px;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: $space-4px;
+}
+
+.cardHeaderSubTitle {
+  text-align: center;
+  color: $color-green;
+
+  @include text-preset-2-bold;
+}
+
+.cardHeaderTitle {
+  text-align: center;
+  color: $color-white;
+
+  @include text-preset-1;
+}
+
+.cardImage {
+  border-radius: 100%;
+  height: 88px;
+  width: 88px;
+}
+
+.cardText {
+  text-align: center;
+  color: $color-white;
+
+  @include text-preset-2;
 }
